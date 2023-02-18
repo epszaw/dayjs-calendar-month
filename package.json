@@ -1,0 +1,54 @@
+{
+  "name": "dayjs-calendar-month",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "vitest",
+    "build": "vite build"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epszaw/dayjs-calendar-month.git"
+  },
+  "keywords": [],
+  "author": "Konstantin Epishev <konstantin@epishev.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epszaw/dayjs-calendar-month/issues"
+  },
+  "homepage": "https://github.com/epszaw/dayjs-calendar-month#readme",
+  "files": [
+    "./dist",
+    "package.json",
+    "dayjs.d.ts",
+    "README.md"
+  ],
+  "types": "./dayjs.d.ts",
+  "main": "./dist/dayjs-calendar-month.js",
+  "module": "./dist/dayjs-calendar-month.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/dayjs-calendar-month.js",
+      "import": "./dist/dayjs-calendar-month.mjs"
+    }
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "simple-git-hooks": "^2.8.1",
+    "vite": "^4.1.2",
+    "vitest": "^0.28.5"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  }
+}
